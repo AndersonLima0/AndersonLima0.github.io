@@ -1,0 +1,185 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  height: 1200px;
+  width: 20vw;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+}
+
+.sidebar-left {
+  background-color: #111;
+  color: white;
+  left: 0;
+}
+
+.sidebar h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.content {
+  left: 30;
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  top: 0;
+  background-color: rgb(83, 75, 75);
+}
+
+.gallery {
+  position: absolute;
+}
+
+footer {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+/* Estilo para o botão e o dropdown */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Esconde a caixa de seleção real */
+.dropdown-checkbox {
+  display: none;
+}
+
+/* Estilo para o dropdown quando a caixa de seleção está marcada */
+.dropdown-checkbox:checked + .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+button,
+.dropdown-button {
+  box-shadow: 0 5px 0 #000000;
+  position: relative;
+}
+button,
+.dropdown-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+button:before,
+.dropdown-button:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+button:after,
+.dropdown-button:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+.dropdown-button:hover {
+  box-shadow: 0 2px 0 #36b030;
+  top: 3px;
+}
+
+/* Estilo para o dropdown quando a caixa de seleção está marcada */
+.dropdown-checkbox:checked + .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 600px) {
+  .sidebar-left {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .dropdown-button {
+    color: white;
+    padding: 4px;
+    border: none;
+    cursor: pointer;
+  }
+}
