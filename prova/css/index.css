@@ -13,7 +13,7 @@ body {
 }
 
 .sidebar-left {
-  background-color: #111;
+  background-color: #c98b05;
   color: white;
   left: 0;
 }
@@ -51,7 +51,11 @@ body {
 }
 
 .gallery {
-  position: absolute;
+  margin-left: 22vw;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 footer {
@@ -170,9 +174,15 @@ button:hover,
   background-color: #f1f1f1;
 }
 @media screen and (max-width: 600px) {
+  .sidebar ul {
+    display: flex;
+  }
+  .sidebar {
+    width: 100vw;
+    max-height: 200px;
+  }
   .sidebar-left {
-    width: 100%;
-    height: auto;
+    height: 100px;
   }
 }
 @media (max-width: 600px) {
@@ -181,5 +191,41 @@ button:hover,
     padding: 4px;
     border: none;
     cursor: pointer;
+  }
+}
+/* width: 48px; e height: 48px;: Define a largura e altura do elemento do loader como 48 pixels, tornando-o quadrado.
+
+border: 5px solid #fff;: Define uma borda sólida de 5 pixels com a cor branca (#fff) ao redor do elemento do loader.
+
+border-bottom-color: #ff3d00;: Define a cor da borda inferior como #ff3d00, criando um efeito visual de gradiente na borda inferior.
+
+border-radius: 50%;: Arredonda as bordas do elemento para criar um círculo, pois o valor de 50% indica que deve ser metade da largura e altura, criando um círculo perfeito.
+
+display: inline-block;: Define o elemento como um bloco em linha, permitindo que ele seja exibido na mesma linha com outros elementos, se houver.
+
+box-sizing: border-box;: Faz com que a largura e altura definidas no CSS incluam a borda e o preenchimento, garantindo que o tamanho total do elemento seja 48px x 48px, incluindo a borda de 5px.
+
+animation: rotation 1s linear infinite;: Aplica uma animação chamada "rotation" com uma duração de 1 segundo (1s), um timing linear (sem aceleração) e execução infinita.
+
+margin-top: 30px; e margin-left: 45vw;: Define a margem superior como 30 pixels e a margem esquerda como 45% da largura da viewport (vw), posicionando o elemento na página. */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-top: 30px;
+  margin-left: 45vw;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
